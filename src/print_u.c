@@ -2,7 +2,7 @@
 
 static void	ft_putnbr_unsigned(unsigned int n)
 {
-	char				c;
+	char	c;
 
 	if (n / 10 > 0)
 		ft_putnbr_unsigned(n / 10);
@@ -15,9 +15,11 @@ int	print_u(unsigned int num)
 	int				count;
 	unsigned int	aux;
 
-	count = 1;
+	count = 0;
+	if (num == 0)
+		count = 1;
 	aux = num;
-	while (aux / 10 > 0)
+	while (aux > 0)
 	{
 		count++;
 		aux = aux / 10;

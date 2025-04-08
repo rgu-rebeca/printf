@@ -18,9 +18,11 @@ int	print_x(unsigned int num)
 	int				count;
 	unsigned int	aux;
 
-	count = 1;
+	count = 0;
+	if (num == 0)
+		count = 1;
 	aux = num;
-	while (aux / 16 > 0)
+	while (aux > 0)
 	{
 		count++;
 		aux = aux / 16;
